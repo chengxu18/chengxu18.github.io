@@ -309,6 +309,105 @@
 
 
   
+    <article id="post-Django框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/26/Django框架/">Django框架</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/26/Django框架/" class="archive-article-date">
+  	<time datetime="2017-12-26T00:24:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>==本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题==</p>
+<h1 id="一、-配置、启动"><a href="#一、-配置、启动" class="headerlink" title="一、 配置、启动"></a>一、 配置、启动</h1><h2 id="1-django-admin-startproject-mysite"><a href="#1-django-admin-startproject-mysite" class="headerlink" title="1.django-admin startproject mysite"></a>1.<code>django-admin startproject mysite</code></h2><p>settings 配置设置<br>urls 路由分配<br>wsgi  web服务器</p>
+<p><code>manage.py</code> —– Django项目里面的工具，通过它可以调用django shell和数据库等。<br><code>settings.py</code> —- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。<br><code>urls.py</code> —– 负责把URL模式映射到应用程序。<br>views 视图函数</p>
+<h2 id="2-在mysite-目录下创建blog应用"><a href="#2-在mysite-目录下创建blog应用" class="headerlink" title="2.在mysite 目录下创建blog应用"></a>2.在mysite 目录下创建blog应用</h2><p><code>python manage.py startapp blog</code><br>blog文件  中<br>models.py   orm<br>views.py      httpresponse实例化    request<br>test.py 检测用<br>admin.py 强大之处</p>
+<h2 id="3-启动Django项目"><a href="#3-启动Django项目" class="headerlink" title="3.启动Django项目"></a>3.启动Django项目</h2><p><code>python manage.py runserver 8080</code></p>
+<h1 id="二、-url路由系统"><a href="#二、-url路由系统" class="headerlink" title="二、 url路由系统"></a>二、 url路由系统</h1><h2 id="1-url与视图函数之间的映射表"><a href="#1-url与视图函数之间的映射表" class="headerlink" title="1.url与视图函数之间的映射表"></a>1.url与视图函数之间的映射表</h2><p>url(正则表达式，视图函数，参数，别名)</p>
+<h2 id="2-正则表达式"><a href="#2-正则表达式" class="headerlink" title="2.正则表达式"></a>2.正则表达式</h2><p>以开头，以$结尾<br>视图函数拿到的都是字符串<br>*url(r’^articles/([0-9]{4})/([0-9]{2})/([0-9]+)/$’, views.article_detail),</p>
+<ul>
+<li>代表重一到无穷次</li>
+</ul>
+<h2 id="3-有命名分组"><a href="#3-有命名分组" class="headerlink" title="3.有命名分组"></a>3.有命名分组</h2><p>url(r’^index/(?P<name>[0-9]{4})’,views.index,{“name”:’alex’})<br>后面name 覆盖前面的值</name></p>
+<h2 id="4-对URL起别名"><a href="#4-对URL起别名" class="headerlink" title="4.对URL起别名"></a>4.对URL起别名</h2><p>action={\% url “alex” %}</p>
+<h2 id="5-模板语言"><a href="#5-模板语言" class="headerlink" title="5.模板语言"></a>5.模板语言</h2><p>{\% for i in user_list%}<br>    <tr><br>        <td></td><br>        <td></td><br>        <td></td><br>    </tr><br>{\% endfor %}</p>
+<h1 id="三、标签"><a href="#三、标签" class="headerlink" title="三、标签"></a>三、标签</h1><p><code>form&gt;input*3</code>按TAB<br><code>&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</code>安全验证<br>将csrf_token加入HTML中</p>
+<h6 id="用于生成csrf-token的标签，用于防治跨站攻击验证。-其实，这里是会生成一个input标签，和其他表单标签一起提交给后台的。"><a href="#用于生成csrf-token的标签，用于防治跨站攻击验证。-其实，这里是会生成一个input标签，和其他表单标签一起提交给后台的。" class="headerlink" title="用于生成csrf_token的标签，用于防治跨站攻击验证。 其实，这里是会生成一个input标签，和其他表单标签一起提交给后台的。"></a>用于生成csrf_token的标签，用于防治跨站攻击验证。 其实，这里是会生成一个input标签，和其他表单标签一起提交给后台的。</h6><p><em>必须在INSTALLED_APPS中添加APP名称</em></p>
+<h1 id="四、Template和Context"><a href="#四、Template和Context" class="headerlink" title="四、Template和Context"></a>四、Template和Context</h1><p> 格式化输出:<code>&quot;%s&quot;  变量</code><br>  前后端分离<br>  模板语言：html+逻辑控制语句，作用：纽带<br>  后端：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">`&#123;&quot;abc&quot;:times&#125;`</span><br><span class="line">`&#123;&quot;abc&quot;:&quot;hello&quot;&#125;`</span><br><span class="line"></span><br><span class="line">  前段：</span><br></pre></td></tr></table></figure></p>
+
+<p>render(请求文件,模板,context)</p>
+<p>return render(request,”cur_time.html”,{“abc”:times})</p>
+<p>命令行如何显示<code>python manage.py shell</code>进入项目的Django环境<br><code>from django.template import Context,Template</code><br><code>t=Template(&quot;hello&quot;)</code><br><code>c=Context({&quot;name&quot;:&quot;alex&quot;})</code><br>t渲染c <code>t.render(c)</code><br>一个模板可以渲染多个context对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">#low</span><br><span class="line">for name in (&apos;John&apos;,&apos;Julie&apos;,&apos;Pat&apos;):</span><br><span class="line">	t = Tempalte(&apos;Hello,&#123;&#123;name&#125;&#125;&apos;)</span><br><span class="line">    print t.render(Context(&#123;&apos;name&apos;:name&#125;))</span><br><span class="line"></span><br><span class="line">#Good</span><br><span class="line">t = Template(&apos;Hello,&#123;&#123;name&#125;&#125;&apos;)</span><br><span class="line">for name in (&apos;John&apos;,&apos;Julie&apos;,&apos;Pat&apos;):</span><br><span class="line">	print t.render(Context(&#123;&apos;name&apos;:name&#125;))</span><br></pre></td></tr></table></figure>
+<p>Django模板解析非常快捷，大部分的解析工作都市在后台通过对简短正则表达式一次性调用来完成。这和基于XML的模板引擎形成鲜明对比，那些引擎承担了xml解析器的开销，且往往比Django模板渲染引擎要满上几个数量级。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">from django.shortcuts import render,HttpResponse</span><br><span class="line">from django.template.loader import get_template #记得导入</span><br><span class="line"># Create your views here.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import datetime</span><br><span class="line">from django.template import Template,Context</span><br><span class="line"></span><br><span class="line"># def current_time(req):</span><br><span class="line">    #原始的视图函数</span><br><span class="line">    # now=datetime.datetime.now()</span><br><span class="line">    # html=&quot;&lt;html&gt;&lt;body&gt;现在时刻：&lt;h1&gt;%s.&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot; %now</span><br><span class="line">    # return HttpResponse(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># def current_time(req):</span><br><span class="line"></span><br><span class="line">      #django模板修改的视图函数</span><br><span class="line">#     now=datetime.datetime.now()</span><br><span class="line">#     t=Template(&apos;&lt;html&gt;&lt;body&gt;现在时刻是:&lt;h1 style=&quot;color:red&quot;&gt;&#123;&#123;current_date&#125;&#125;&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&apos;)</span><br><span class="line">      #t=get_template(&apos;current_datetime.html&apos;)</span><br><span class="line">#     c=Context(&#123;&apos;current_date&apos;:now&#125;)</span><br><span class="line">#     html=t.render(c)</span><br><span class="line">#     return HttpResponse(html)</span><br><span class="line"></span><br><span class="line">#另一种写法(推荐)</span><br><span class="line"></span><br><span class="line">def current_time(req):</span><br><span class="line"></span><br><span class="line">    now=datetime.datetime.now()</span><br><span class="line"></span><br><span class="line">    return render(req, &apos;current_datetime.html&apos;, &#123;&apos;current_date&apos;:now&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="五、-过滤器filter"><a href="#五、-过滤器filter" class="headerlink" title="五、 过滤器filter"></a>五、 过滤器filter</h1><h2 id="万能的句点号"><a href="#万能的句点号" class="headerlink" title="万能的句点号"></a>万能的句点号</h2><p>sys.path 记录搜索变量的路径，项目加载的时候回添加到项目根目录位置<br>模板语言中没有中括号，用句点号</p>
+<h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><p>循环计时，从1开始计<br>counter0从0开始计</p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><h2 id="常用过滤器"><a href="#常用过滤器" class="headerlink" title="常用过滤器"></a>常用过滤器</h2><p>1  add          ：   给变量加上相应的值<br> 2  addslashes   :    给变量中的引号前加上斜线<br> 3  capfirst     :    首字母大写<br>4  cut          ：   从字符串中移除指定的字符<br> 5  date         ：   格式化日期字符串<br> 6  default      ：   如果值是False,就替换成设置的默认值，否则就是用本来的值<br> 7  default_if_none:  如果值是None，就替换成设置的默认值，否则就使用本来的值</p>
+<h1 id="六、继承"><a href="#六、继承" class="headerlink" title="六、继承"></a>六、继承</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/26/Django框架/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-浮生六十载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -524,11 +623,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
