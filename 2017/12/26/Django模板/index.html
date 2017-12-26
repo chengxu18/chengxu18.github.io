@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/26/Django模板/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="==本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题== 一、 配置、启动1.django-admin startproject mysitesettings 配置设置urls 路由分配wsgi  web服务器 manage.py —– Django项目里面的工具，通过它可以调用django shell和数据库等。settings.py —- 包含了项目的">
-<meta property="og:updated_time" content="2017-12-26T02:42:14.912Z">
+<meta property="og:updated_time" content="2017-12-26T07:22:54.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django模板">
 <meta name="twitter:description" content="==本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题== 一、 配置、启动1.django-admin startproject mysitesettings 配置设置urls 路由分配wsgi  web服务器 manage.py —– Django项目里面的工具，通过它可以调用django shell和数据库等。settings.py —- 包含了项目的">
@@ -179,6 +179,7 @@
 <p><code>manage.py</code> —– Django项目里面的工具，通过它可以调用django shell和数据库等。<br><code>settings.py</code> —- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。<br><code>urls.py</code> —– 负责把URL模式映射到应用程序。<br>views 视图函数</p>
 <h2 id="2-在mysite-目录下创建blog应用"><a href="#2-在mysite-目录下创建blog应用" class="headerlink" title="2.在mysite 目录下创建blog应用"></a>2.在mysite 目录下创建blog应用</h2><p><code>python manage.py startapp blog</code><br>blog文件  中<br>models.py   orm<br>views.py      httpresponse实例化    request<br>test.py 检测用<br>admin.py 强大之处</p>
 <h2 id="3-启动Django项目"><a href="#3-启动Django项目" class="headerlink" title="3.启动Django项目"></a>3.启动Django项目</h2><p><code>python manage.py runserver 8080</code></p>
+<h2 id="创建APP"><a href="#创建APP" class="headerlink" title="创建APP"></a>创建APP</h2><p><code>python manage.py startapp app01</code></p>
 <h1 id="二、-url路由系统"><a href="#二、-url路由系统" class="headerlink" title="二、 url路由系统"></a>二、 url路由系统</h1><h2 id="1-url与视图函数之间的映射表"><a href="#1-url与视图函数之间的映射表" class="headerlink" title="1.url与视图函数之间的映射表"></a>1.url与视图函数之间的映射表</h2><p>url(正则表达式，视图函数，参数，别名)</p>
 <h2 id="2-正则表达式"><a href="#2-正则表达式" class="headerlink" title="2.正则表达式"></a>2.正则表达式</h2><p>以开头，以$结尾<br>视图函数拿到的都是字符串<br>*url(r’^articles/([0-9]{4})/([0-9]{2})/([0-9]+)/$’, views.article_detail),</p>
 <ul>
