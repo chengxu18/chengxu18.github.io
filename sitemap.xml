@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2017/12/26/Django%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    
+    <lastmod>2017-12-26T08:14:21.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/12/26/Django%E6%A8%A1%E6%9D%BF/</loc>
+    
+    <lastmod>2017-12-26T07:22:54.561Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/12/21/hello-world/</loc>
+    
+    <lastmod>2017-12-21T13:03:18.664Z</lastmod>
+    
+  </url>
+  
+</urlset>
