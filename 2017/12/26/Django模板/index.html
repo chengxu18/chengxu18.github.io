@@ -1,165 +1,174 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-    <!--Setting-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no,email=no,adress=no">
-    <meta name="browsermode" content="application">
-    <meta name="screen-orientation" content="portrait">
-    <link rel="dns-prefetch" href="http://yoursite.com">
-    <!--SEO-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Django模板｜undefined
+        
+    </title>
 
+    <link rel="canonical" href="http://yoursite.com/2017/12/26/Django模板/">
 
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-<meta name="robots" content="all" />
-<meta name="google" content="all" />
-<meta name="googlebot" content="all" />
-<meta name="verify" content="all" />
-    <!--Title-->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
 
-
-<title>Django模板 | Hexo</title>
-
-
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-
-
-    <link rel="icon" href="/favicon.ico">
-
-    
-
-
-
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css?rev=9.12.0">
-
-
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
-<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/style.css?rev=@@hash">
-
-
-
-
-    
-    <div class="hide">
-    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
-    </div>
-
-
-
-
-
-
-    
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 </head>
 
-
-<!--[if lte IE 8]>
 <style>
-    html{ font-size: 1em }
-</style>
-<![endif]-->
-<!--[if lte IE 9]>
-<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
-<![endif]-->
 
-<body>
-    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
-    <div class="main-header-box">
-        <a class="header-avatar" href="/" title="">
-            <img src="/img/avatar.jpg" alt="logo头像">
-        </a>
-        <div class="branding">
-        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
-            
-                 <img src="/img/branding.png" alt="Snippet 博客主题">  
-             
-    	</div>
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Hexo
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
     </div>
-</header>
-    <nav class="main-navigation">
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <i class="fa fa-bars"></i>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Django模板</h1>
+                    
+                    <span class="meta">
+                         作者 John Doe
+                        <span>
+                          日期 2017-12-26
+                         </span>
                     </span>
-                </div>
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="menu">
+                    <div class="tags text-center">
                         
-                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
-                            </li>
+                        <a class="tag" href="/tags/#Django框架"
+                           title="Django框架">Django框架</a>
                         
-                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
-                            </li>
-                        
-                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
-                            </li>
-                        
-                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
-                            </li>
-                        
-                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
-                            </li>
-                        
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</nav>
-    <section class="content-wrap">
-        <div class="container">
-            <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="Django模板">
-            
+    <div class="post-title-haojen">
+        <span>
             Django模板
-            
-        </h1>
-        <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <span>无</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Django框架
-            
         </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/12/26</span>
-    </span>
-</div>
-
-            
-            
     </div>
-    
-    <div class="post-body post-content">
-        <p>==本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题==</p>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>==本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题==</p>
 <h1 id="一、-配置、启动"><a href="#一、-配置、启动" class="headerlink" title="一、 配置、启动"></a>一、 配置、启动</h1><h2 id="1-django-admin-startproject-mysite"><a href="#1-django-admin-startproject-mysite" class="headerlink" title="1.django-admin startproject mysite"></a>1.<code>django-admin startproject mysite</code></h2><p>settings 配置设置<br>urls 路由分配<br>wsgi  web服务器</p>
 <p><code>manage.py</code> —– Django项目里面的工具，通过它可以调用django shell和数据库等。<br><code>settings.py</code> —- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。<br><code>urls.py</code> —– 负责把URL模式映射到应用程序。<br>views 视图函数</p>
 <h2 id="2-在mysite-目录下创建blog应用"><a href="#2-在mysite-目录下创建blog应用" class="headerlink" title="2.在mysite 目录下创建blog应用"></a>2.在mysite 目录下创建blog应用</h2><p><code>python manage.py startapp blog</code><br>blog文件  中<br>models.py   orm<br>views.py      httpresponse实例化    request<br>test.py 检测用<br>admin.py 强大之处</p>
@@ -200,209 +209,163 @@
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;1&gt;如果在模板中使用 extends必须保证其为模板中的第一个模板标记。 否则，模板继承将不起作用</span><br><span class="line"> &lt;2&gt;一般来说，基础模板中的block %标签越多越好。</span><br><span class="line"> &lt;3&gt;如果发觉自己在多个模板之间拷贝代码，你应该考虑将该代码段放置到父模板的某个  block中。如果要访问父模板中的块的内容，使用 &#123;&#123; block.super &#125;&#125;这个标签</span><br><span class="line">&lt;4&gt;不允许在同一个模板中定义多个同名的  block。存在这样的限制是因为block 标签的工作方式是双向的。block 标签不仅挖了一个要填的坑，也定义了在父模板中这个坑所填充的内容。如果模板中出现了两个相同名称的block标签，父模板将无从得知要使用哪个块的内容。</span><br></pre></td></tr></table></figure>
 <p>==小结==<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. 重点 render(req,template对象，context对象)</span><br><span class="line">2. 句点号（调用列表，属性）</span><br><span class="line">3. 两个大括号加变量</span><br><span class="line">4. &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">5. |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">6. sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">7. 在settings中 `Installapps（app）`</span><br><span class="line">8. 文件夹的名字固定：templatetags  tags</span><br><span class="line">9. .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">10. 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure></p>
 
-    </div>
+                <hr>
+                
 
-    <div class="post-footer">   
-        <div>
-            
-                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
-            
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/12/26/Django数据库/" data-toggle="tooltip" data-placement="top"
+                           title="Django数据库">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/12/21/hello-world/" data-toggle="tooltip" data-placement="top"
+                           title="Hello World">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、-配置、启动"><span class="toc-text">一、 配置、启动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-django-admin-startproject-mysite"><span class="toc-text">1.django-admin startproject mysite</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在mysite-目录下创建blog应用"><span class="toc-text">2.在mysite 目录下创建blog应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-启动Django项目"><span class="toc-text">3.启动Django项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建APP"><span class="toc-text">创建APP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、-url路由系统"><span class="toc-text">二、 url路由系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-url与视图函数之间的映射表"><span class="toc-text">1.url与视图函数之间的映射表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-正则表达式"><span class="toc-text">2.正则表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-有命名分组"><span class="toc-text">3.有命名分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-对URL起别名"><span class="toc-text">4.对URL起别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-模板语言"><span class="toc-text">5.模板语言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、标签"><span class="toc-text">三、标签</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#用于生成csrf-token的标签，用于防治跨站攻击验证。-其实，这里是会生成一个input标签，和其他表单标签一起提交给后台的。"><span class="toc-text">用于生成csrf_token的标签，用于防治跨站攻击验证。 其实，这里是会生成一个input标签，和其他表单标签一起提交给后台的。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Template和Context"><span class="toc-text">四、Template和Context</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、-过滤器filter"><span class="toc-text">五、 过滤器filter</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#万能的句点号"><span class="toc-text">万能的句点号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#if"><span class="toc-text">if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#filter-sample-tag"><span class="toc-text">filter,sample_tag</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用过滤器"><span class="toc-text">常用过滤器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、模板-继承"><span class="toc-text">六、模板 继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建"><span class="toc-text">创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol></li></ol>
+                </div>
+            </div>
         </div>
-        <div>
-            
-        </div>  
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
     </div>
 </article>
 
-<div class="article-nav prev-next-wrap clearfix">
-    
-        <a href="/2017/12/26/Django数据库/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
-    
-    
-        <a href="/2017/12/21/hello-world/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
-    
-</div>
-
-
-    <div id="comments">
-        
-    <div id="uyan_frame"></div>
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1966422"></script>
 
 
 
 
 
 
-
-
-    </div>
-
-
-
-
-
-                </main>
-                
-    <aside class="col-md-4 sidebar">
-        
-        
-    <div class="widget">    
-        <h3 class="title">Search</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
-                
-                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
-                    </div>
-                </template>
-            </div>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget notification">
-        <h3 class="title">网站公告</h3>
-        <div>
-            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
-主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-      <h3 class="title">Social</h3> 
-        <div class="content social">
-            
-	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
-			    	<i class="git fa fa-git"></i>
-			    </a>
-            
-	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
-			    	<i class="envelope-o fa fa-envelope-o"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="微博" target="_blank">
-			    	<i class="weibo fa fa-weibo"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
-			    	<i class="users fa fa-users"></i>
-			    </a>
-            
-	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
-			    	<i class="feed fa fa-feed"></i>
-			    </a>
-            
-        </div>
-    </div>
-
-
-        
-        
-
-        
-        
-    <div class="widget">
-      <h3 class="title">Archives</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">December 2017</i></a><span class="archive-list-count">3</span></li></ul>
-    </div>
-
-
-        
-        
-  <div class="widget">
-    <h3 class="title">Tag Cloud</h3>
-    <div class="content tag-cloud">
-        <a href="/tags/Django框架/" style="font-size: 10px;">Django框架</a>
-    </div>
-  </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Friends</h3>
-        <div class="content friends-link">
-        
-            <a href="http://www.shenliyang.com" class="fa" target="_blank">个人博客</a>
-        
-        </div>
-    </div>
-
-
-        
-    </aside>
-
-            </div>
-        </div>
-    </section>
-    <footer class="main-footer">
+<!-- Footer -->
+<!-- Footer -->
+<footer>
     <div class="container">
         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Hexo 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
         </div>
     </div>
 </footer>
 
-<a id="back-to-top" class="hide">
-	<i class="fa fa-chevron-up"></i>
-</a>
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
 
 
 
-
-    <div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12"> 
-                <span>Copyright &copy; 2017
-                </span> | 
-                <span>
-                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | 
-                <span>
-                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Baidu Tongji -->
 
 
-  <script src="/assets/highlight.pack.js?rev=@@hash"></script>
-  <script>
-     hljs.initHighlightingOnLoad(); //初始化代码高亮 
-  </script>
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
+  _st('install','','2.0.0');
+</script>
 
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-	<script src="/js/search.js?rev=@@hash"></script>
-
-
-<script src="/js/app.js?rev=@@hash"></script>
-
-
+<!--wechat title img-->
+<img class="wechat-title-img" src="">
 </body>
+
 </html>
