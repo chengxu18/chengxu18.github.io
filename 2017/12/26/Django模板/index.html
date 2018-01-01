@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题  一、 配置、启动1.django-admin startproject mysitesettings 配置设置urls 路由分配wsgi  web服务器 manage.py —– Django项目里面的工具，通过它可以调用django shell和数据库等。settings.py —- 包含了项目的默认设">
 <meta property="og:image" content="e:/chengxu18/public/images/马里奥.jpg">
-<meta property="og:updated_time" content="2017-12-28T01:06:39.022Z">
+<meta property="og:updated_time" content="2018-01-01T00:56:20.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django模板">
 <meta name="twitter:description" content="本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题  一、 配置、启动1.django-admin startproject mysitesettings 配置设置urls 路由分配wsgi  web服务器 manage.py —– Django项目里面的工具，通过它可以调用django shell和数据库等。settings.py —- 包含了项目的默认设">
@@ -189,7 +189,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -199,7 +199,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -263,7 +263,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-26T08:24:52+08:00">
                 2017-12-26
@@ -326,9 +326,10 @@
 <li>with 用更简单的变量名替代复杂的变量名</li>
 <li>url 引用路由配置</li>
 <li>load 加载标签库</li>
-<li>verbatim 禁止render<br>forloop.counter 计数器<br><em>必须在INSTALLED_APPS中添加APP名称</em><h1 id="四、Template和Context"><a href="#四、Template和Context" class="headerlink" title="四、Template和Context"></a>四、Template和Context</h1>格式化输出:<code>&quot;%s&quot;  变量</code><br>前后端分离<br>模板语言：html+逻辑控制语句，作用：纽带<br>后端：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">`&#123;&quot;abc&quot;:times&#125;`</span><br><span class="line">`&#123;&quot;abc&quot;:&quot;hello&quot;&#125;`</span><br><span class="line"></span><br><span class="line">  前段：</span><br></pre></td></tr></table></figure>
-</li>
+<li>verbatim 禁止render<br>forloop.counter 计数器<br><em>必须在INSTALLED_APPS中添加APP名称</em></li>
 </ol>
+<h1 id="四、Template和Context"><a href="#四、Template和Context" class="headerlink" title="四、Template和Context"></a>四、Template和Context</h1><p> 格式化输出:<code>&quot;%s&quot;  变量</code><br>  前后端分离<br>  模板语言：html+逻辑控制语句，作用：纽带<br>  后端：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">`&#123;&quot;abc&quot;:times&#125;`</span><br><span class="line">`&#123;&quot;abc&quot;:&quot;hello&quot;&#125;`</span><br></pre></td></tr></table></figure></p>
+<p>  前端：</p>
 
 <p>render(请求文件,模板,context)</p>
 <p>return render(request,”cur_time.html”,{“abc”:times})</p>
@@ -343,7 +344,7 @@
 <h1 id="六、模板-继承"><a href="#六、模板-继承" class="headerlink" title="六、模板 继承"></a>六、模板 继承</h1><p>在HTML中 可替换的部分 用  <code>block  endblock</code>包起来<br>在填充 HTML中 extends 继承父HTML文件，而且可以邮以下形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">block</span><br><span class="line">	block</span><br><span class="line">    endblock</span><br><span class="line">endblock</span><br></pre></td></tr></table></figure></p>
 <h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;1&gt; 创建 base.html 模板，在其中定义站点的主要外观感受。 这些都是不常修改甚至从不修改的部分。</span><br><span class="line">&lt;2&gt; 为网站的每个区域创建 base_SECTION.html 模板(例如, base_photos.html 和 base_forum.html )。这些模板对base.html 进行拓展，并包含区域特定的风格与设计。</span><br><span class="line">&lt;3&gt; 为每种类型的页面创建独立的模板，例如论坛页面或者图片库。 这些模板拓展相应的区域模板。</span><br></pre></td></tr></table></figure>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;1&gt;如果在模板中使用 extends必须保证其为模板中的第一个模板标记。 否则，模板继承将不起作用</span><br><span class="line"> &lt;2&gt;一般来说，基础模板中的block %标签越多越好。</span><br><span class="line"> &lt;3&gt;如果发觉自己在多个模板之间拷贝代码，你应该考虑将该代码段放置到父模板的某个  block中。如果要访问父模板中的块的内容，使用 &#123;&#123; block.super &#125;&#125;这个标签</span><br><span class="line">&lt;4&gt;不允许在同一个模板中定义多个同名的  block。存在这样的限制是因为block 标签的工作方式是双向的。block 标签不仅挖了一个要填的坑，也定义了在父模板中这个坑所填充的内容。如果模板中出现了两个相同名称的block标签，父模板将无从得知要使用哪个块的内容。</span><br></pre></td></tr></table></figure>
-<p>==小结==<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. 重点 render(req,template对象，context对象)</span><br><span class="line">2. 句点号（调用列表，属性）</span><br><span class="line">3. 两个大括号加变量</span><br><span class="line">4. &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">5. |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">6. sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">7. 在settings中 `Installapps（app）`</span><br><span class="line">8. 文件夹的名字固定：templatetags  tags</span><br><span class="line">9. .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">10. 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure></p>
+<p>==小结==<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- 重点 render(req,template对象，context对象)</span><br><span class="line">- 句点号（调用列表，属性）</span><br><span class="line">- 两个大括号加变量</span><br><span class="line">- &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">- |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">- sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">- 在settings中 `Installapps（app）`</span><br><span class="line">- 文件夹的名字固定：templatetags  tags</span><br><span class="line">- .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">- 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -440,10 +441,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -464,7 +465,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -477,7 +478,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 
               </div>
             
@@ -538,7 +539,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -548,7 +549,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
