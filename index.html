@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/26/Django数据库/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/01/Ajax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,127 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/26/Django数据库/" itemprop="url">Django数据库</a></h1>
+                <a class="post-title-link" href="/2018/01/01/Ajax/" itemprop="url">Ajax</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-01T10:59:41+08:00">
+                2018-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.两大特点<br>局部刷新<br>异步传送<br>2.操作<br>创建核心对象  XmlHTTPRequest<br>使用核心对象打开服务器的连接<br>发送请求<br>注册监听，监听服务器响应</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/26/Django_modules/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/26/Django_modules/" itemprop="url">Django_modules</a></h1>
         
 
         <div class="post-meta">
@@ -301,20 +421,29 @@
       
         
           
-            <p><img src="E:\chengxu18\public\images\按钮.jpg" alt="按钮.jpg"></p>
-<h1 id="一、ORM-对象关系映射"><a href="#一、ORM-对象关系映射" class="headerlink" title="一、ORM(对象关系映射)"></a>一、ORM(对象关系映射)</h1><p>ORM使得数据库交互变得简单，不用考虑SQL语句。但是性能上面可能会差一点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">创建表</span><br><span class="line">1. 创建单表（与其他表无关）</span><br><span class="line">2. 创建关联表（foreignKey）</span><br><span class="line">-    一对一(OneToOne) </span><br><span class="line">-    一对多(ForeignKey)自动添加_id</span><br><span class="line">-    多对多(ManyToMany)</span><br><span class="line">操作表(对行对象操作)：</span><br><span class="line">- 增：create</span><br><span class="line">		1、models.Book.objects.create(title=&quot;Python&quot;,price=&quot;12&quot;)</span><br><span class="line">        2、dic=&#123;&quot;title&quot;:&quot;python&quot;,&quot;price&quot;:12&#125;</span><br><span class="line">           models.Book.objects.create(**dic)</span><br><span class="line">           如果有外键：</span><br><span class="line">           一对多：models.Book.objects.create(title=&quot;Python&quot;,price=&quot;12&quot;)</span><br><span class="line">           多对多：add()  remove()</span><br><span class="line">           #正向查询</span><br><span class="line">           book = models.Book.objects.filter(id=2)[0]</span><br><span class="line">           authors=models.Author.objects.filter(id__gt=2)#id大于2</span><br><span class="line">           book.author.add(*authors)</span><br><span class="line">           book.author.remove(*authors)</span><br><span class="line">           #反向查询</span><br><span class="line">           author = models.Author.objects.filter(id=2)</span><br><span class="line">           books = models.Book.objects.filter(id__gt=2)</span><br><span class="line">           author.book_set.add(*books)#book_set是一个QuerySet集合</span><br><span class="line">           author.book_set.remove(*books)</span><br><span class="line">	  save</span><br><span class="line">      	1、obj.Book(title=&quot;python&quot;,price=12)</span><br><span class="line">           obj.save()</span><br><span class="line">        2、obj=Book()</span><br><span class="line">           obj.title=&quot;GO&quot;</span><br><span class="line">           obj.price=12</span><br><span class="line">           obj.save()</span><br><span class="line">- 删</span><br><span class="line">- 改</span><br><span class="line">- 查</span><br></pre></td></tr></table></figure></p>
+            <h1 id="一、ORM-对象关系映射"><a href="#一、ORM-对象关系映射" class="headerlink" title="一、ORM(对象关系映射)"></a>一、ORM(对象关系映射)</h1><p>ORM使得数据库交互变得简单，不用考虑SQL语句。但是性能上面可能会差一点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">创建表</span><br><span class="line">1. 创建单表（与其他表无关）</span><br><span class="line">2. 创建关联表（foreignKey）</span><br><span class="line">-    一对一(OneToOne) </span><br><span class="line">-    一对多(ForeignKey)自动添加_id</span><br><span class="line">-    多对多(ManyToMany)</span><br><span class="line">操作表(对行对象操作)：</span><br><span class="line">- 增：create</span><br><span class="line">		1、models.Book.objects.create(title=&quot;Python&quot;,price=&quot;12&quot;)</span><br><span class="line">        2、dic=&#123;&quot;title&quot;:&quot;python&quot;,&quot;price&quot;:12&#125;</span><br><span class="line">           models.Book.objects.create(**dic)</span><br><span class="line">           如果有外键：</span><br><span class="line">           一对多：models.Book.objects.create(title=&quot;Python&quot;,price=&quot;12&quot;)</span><br><span class="line">           多对多：add()  remove()</span><br><span class="line">           自动创建ManyToMany</span><br><span class="line">           #正向查询</span><br><span class="line">           book = models.Book.objects.filter(id=2)[0]</span><br><span class="line">           authors=models.Author.objects.filter(id__gt=2)#id大于2</span><br><span class="line">           book.author.add(*authors)</span><br><span class="line">           book.author.remove(*authors)</span><br><span class="line">           #反向查询</span><br><span class="line">           author = models.Author.objects.filter(id=2)</span><br><span class="line">           books = models.Book.objects.filter(id__gt=2)</span><br><span class="line">           author.book_set.add(*books)#book_set是一个QuerySet集合</span><br><span class="line">           author.book_set.remove(*books)</span><br><span class="line">           自己创建第三张表OneToOne</span><br><span class="line">           通过两个Foreignkey，unique=True</span><br></pre></td></tr></table></figure></p>
+<p>class Book2Author(models.Model):<br>    author = models.ForeignKey(“Author”)<br>    book = models.ForeignKey(“Book”)</p>
+<pre><code>class Meta:
+    unique_together = [&quot;author&quot;,&quot;book&quot;]
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	  save</span><br><span class="line">      	1、obj.Book(title=&quot;python&quot;,price=12)</span><br><span class="line">           obj.save()</span><br><span class="line">        2、obj=Book()</span><br><span class="line">           obj.title=&quot;GO&quot;</span><br><span class="line">           obj.price=12</span><br><span class="line">           obj.save()</span><br><span class="line">- 删</span><br><span class="line">- 改</span><br><span class="line">- 查</span><br></pre></td></tr></table></figure>
 <p>str方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Person():</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">obj = Person(&quot;alex&quot;)</span><br><span class="line">print(obj)</span><br></pre></td></tr></table></figure></p>
 <p>产生结果：<br><code>&lt;__main__.Person object at 0x0094A430&gt;</code></p>
 <h3 id="创建表的一些操作："><a href="#创建表的一些操作：" class="headerlink" title="创建表的一些操作："></a>创建表的一些操作：</h3><p><code>models.CharField</code><br><code>models.BooleanField</code><br><code>models.DateField</code></p>
 <h3 id="命令行创建表"><a href="#命令行创建表" class="headerlink" title="命令行创建表"></a>命令行创建表</h3><p><code>python manage.py makemigrations</code><br><code>python manage.py migrate</code></p>
 <h2 id="表的操作"><a href="#表的操作" class="headerlink" title="表的操作"></a>表的操作</h2><h3 id="增create-save"><a href="#增create-save" class="headerlink" title="增create,save"></a>增create,save</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from app01.models import *</span><br><span class="line"></span><br><span class="line">    #create方式一:   Author.objects.create(name=&apos;Alvin&apos;)</span><br><span class="line">    </span><br><span class="line">    #create方式二:   Author.objects.create(**&#123;&quot;name&quot;:&quot;alex&quot;&#125;)#(建议用这种)</span><br><span class="line"></span><br><span class="line">    #save方式一:     author=Author(name=&quot;alvin&quot;)</span><br><span class="line">                            author.save()</span><br><span class="line"></span><br><span class="line">    #save方式二:     author=Author()</span><br><span class="line">                            author.name=&quot;alvin&quot;</span><br><span class="line">                            author.save()</span><br></pre></td></tr></table></figure>
 <p>创建一对多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#一对多(ForeignKey):</span><br><span class="line"></span><br><span class="line">    #方式一: 由于绑定一对多的字段,比如publish,存到数据库中的字段名叫publish_id,所以我们可以直接给这个</span><br><span class="line">    #       字段设定对应值:</span><br><span class="line">           Book.objects.create(title=&apos;php&apos;,</span><br><span class="line">                               publisher_id=2,   #这里的2是指为该book对象绑定了Publisher表中id=2的行对象</span><br><span class="line">                               publication_date=&apos;2017-7-7&apos;,</span><br><span class="line">                               price=99)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #方式二:</span><br><span class="line">    #       &lt;1&gt; 先获取要绑定的Publisher对象:</span><br><span class="line">        pub_obj=Publisher(name=&apos;河大出版社&apos;,address=&apos;保定&apos;,city=&apos;保定&apos;,</span><br><span class="line">                state_province=&apos;河北&apos;,country=&apos;China&apos;,website=&apos;http://www.hbu.com&apos;)</span><br><span class="line">    OR  pub_obj=Publisher.objects.get(id=1)</span><br><span class="line"></span><br><span class="line">    #       &lt;2&gt;将 publisher_id=2 改为  publisher=pub_obj</span><br><span class="line"></span><br><span class="line">#多对多(ManyToManyField()):</span><br><span class="line"></span><br><span class="line">    author1=Author.objects.get(id=1)</span><br><span class="line">    author2=Author.objects.filter(name=&apos;alvin&apos;)[0]</span><br><span class="line">    book=Book.objects.get(id=1)</span><br><span class="line">    book.authors.add(author1,author2)</span><br><span class="line">    #等同于:</span><br><span class="line">    book.authors.add(*[author1,author2])</span><br><span class="line">    book.authors.remove(*[author1,author2])</span><br><span class="line">    #-------------------</span><br><span class="line">    book=models.Book.objects.filter(id__gt=1)</span><br><span class="line">    authors=models.Author.objects.filter(id=1)[0]</span><br><span class="line">    authors.book_set.add(*book)</span><br><span class="line">    authors.book_set.remove(*book)</span><br><span class="line">    #-------------------</span><br><span class="line">    book.authors.add(1)</span><br><span class="line">    book.authors.remove(1)</span><br><span class="line">    authors.book_set.add(1)</span><br><span class="line">    authors.book_set.remove(1)</span><br><span class="line"></span><br><span class="line">#注意: 如果第三张表是通过models.ManyToManyField()自动创建的,那么绑定关系只有上面一种方式</span><br><span class="line">#     如果第三张表是自己创建的:</span><br><span class="line">     class Book2Author(models.Model):</span><br><span class="line">            author=models.ForeignKey(&quot;Author&quot;)</span><br><span class="line">            Book=  models.ForeignKey(&quot;Book&quot;)</span><br><span class="line">#     那么就还有一种方式:</span><br><span class="line">            author_obj=models.Author.objects.filter(id=2)[0]</span><br><span class="line">            book_obj  =models.Book.objects.filter(id=3)[0]</span><br><span class="line"></span><br><span class="line">            s=models.Book2Author.objects.create(author_id=1,Book_id=2)</span><br><span class="line">            s.save()</span><br><span class="line">            s=models.Book2Author(author=author_obj,Book_id=1)</span><br><span class="line">            s.save()</span><br></pre></td></tr></table></figure></p>
-<h3 id="删delete"><a href="#删delete" class="headerlink" title="删delete"></a>删delete</h3><p>Book.objects.filter(id=1).delete()</p>
-<h3 id="改update，save"><a href="#改update，save" class="headerlink" title="改update，save"></a>改update，save</h3><p>save拿到对象，对整个集合更改一次，即使数据没变。<br>update拿到集合<br>update效率高<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">author=Author.objects.get(id=5)</span><br><span class="line">author.name=&apos;I&apos;</span><br><span class="line">author.save()</span><br><span class="line"></span><br><span class="line">Publisher.objects.filter(id=2).update(name=&apos;I&apos;)#不能用get(id=2)</span><br></pre></td></tr></table></figure></p>
+<h3 id="删delete"><a href="#删delete" class="headerlink" title="删delete"></a>删delete</h3><p>Book.objects.filter(id=1).delete()<br>级联删除</p>
+<h3 id="改update，save"><a href="#改update，save" class="headerlink" title="改update，save"></a>改update，save</h3><p>save拿到对象，对整个集合更改一次，即使数据没变。<br>update集合对象才能调用，拿到集合,update效率高<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">author=Author.objects.get(id=5)</span><br><span class="line">author.name=&apos;I&apos;</span><br><span class="line">author.save()</span><br><span class="line"></span><br><span class="line">Publisher.objects.filter(id=2).update(name=&apos;I&apos;)#不能用get(id=2)</span><br></pre></td></tr></table></figure></p>
 <p>*<1> 第二种方式修改不能用get的原因是：update是QuerySet对象的方法，get返回的是一个model对象，它没有update方法，而filter返回的是一个QuerySet对象(filter里面的条件可能有多个条件符合，比如name＝’alvin’,可能有两个name＝’alvin’的行数据)。</1></p>
-<p><2>在“插入和更新数据”小节中，我们有提到模型的save()方法，这个方法会更新一行里的所有列。 而某些情况下，我们只需要更新行里的某几列。*</2></p>
+<p><2>save()方法会更新一行里的所有列。效率低*</2></p>
 <h3 id="查filter-value"><a href="#查filter-value" class="headerlink" title="查filter,value"></a>查filter,value</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># 查询相关API：</span><br><span class="line"></span><br><span class="line">#  &lt;1&gt;filter(**kwargs):      它包含了与所给筛选条件相匹配的对象，拿到集合</span><br><span class="line"></span><br><span class="line">#  &lt;2&gt;all():                 查询所有结果，拿到集合</span><br><span class="line"></span><br><span class="line">#  &lt;3&gt;get(**kwargs):         返回与所给筛选条件相匹配的对象，返回结果有且只有一个，如果符合筛选条件的对象超过一个或者没有都会抛出错误。拿到一个对象</span><br><span class="line"></span><br><span class="line">#-----------下面的方法都是对查询的结果再进行处理:比如 objects.filter.values()--------</span><br><span class="line"></span><br><span class="line">#  &lt;4&gt;values(*field):        返回一个ValueQuerySet——一个特殊的QuerySet，运行后得到的并不是一系列 model的实例化对象，而是一个可迭代的字典序列                                    </span><br><span class="line">#  &lt;5&gt;exclude(**kwargs):     它包含了与所给筛选条件不匹配的对象</span><br><span class="line"></span><br><span class="line">#  &lt;6&gt;order_by(*field):      对查询结果排序，order_by(-*field)</span><br><span class="line"></span><br><span class="line">#  &lt;7&gt;reverse():             对查询结果反向排序</span><br><span class="line"></span><br><span class="line">#  &lt;8&gt;distinct():            从返回结果中剔除重复纪录</span><br><span class="line"></span><br><span class="line">#  &lt;9&gt;values_list(*field):   它与values()非常相似，它返回的是一个元组序列，values返回的是一个字典序列</span><br><span class="line"></span><br><span class="line">#  &lt;10&gt;count():              返回数据库中匹配查询(QuerySet)的对象数量。</span><br><span class="line"></span><br><span class="line">#  &lt;11&gt;first():               返回第一条记录</span><br><span class="line"></span><br><span class="line">#  &lt;12&gt;last():                返回最后一条记录</span><br><span class="line"></span><br><span class="line">#  &lt;13&gt;exists():             如果QuerySet包含数据，就返回True，否则返回False</span><br></pre></td></tr></table></figure>
-<h3 id="QuerySet惰性机制"><a href="#QuerySet惰性机制" class="headerlink" title="QuerySet惰性机制"></a>QuerySet惰性机制</h3><p>可迭代，可切片<br>惰性机制：Publisher.objects.all()或者.filter()等都只是返回了一个QuerySet（查询结果集对象），它并不会马上执行sql，而是当调用QuerySet的时候才执行。<br>打印日志（写入到settings中）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">LOGGING = &#123;</span><br><span class="line">    &apos;version&apos;: 1,</span><br><span class="line">    &apos;disable_existing_loggers&apos;: False,</span><br><span class="line">    &apos;handlers&apos;: &#123;</span><br><span class="line">        &apos;console&apos;:&#123;</span><br><span class="line">            &apos;level&apos;:&apos;DEBUG&apos;,</span><br><span class="line">            &apos;class&apos;:&apos;logging.StreamHandler&apos;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;loggers&apos;: &#123;</span><br><span class="line">        &apos;django.db.backends&apos;: &#123;</span><br><span class="line">            &apos;handlers&apos;: [&apos;console&apos;],</span><br><span class="line">            &apos;propagate&apos;: True,</span><br><span class="line">            &apos;level&apos;:&apos;DEBUG&apos;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="QuerySet惰性机制"><a href="#QuerySet惰性机制" class="headerlink" title="QuerySet惰性机制"></a>QuerySet惰性机制</h3><p>可迭代，可切片<br>惰性机制：Publisher.objects.all()或者.filter()等都只是返回了一个QuerySet（查询结果集对象），它并不会马上执行sql，而是当调用QuerySet的时候才执行。</p>
+<h5 id="打印日志（写入到settings中）"><a href="#打印日志（写入到settings中）" class="headerlink" title="打印日志（写入到settings中）"></a>打印日志（写入到settings中）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">LOGGING = &#123;</span><br><span class="line">    &apos;version&apos;: 1,</span><br><span class="line">    &apos;disable_existing_loggers&apos;: False,</span><br><span class="line">    &apos;handlers&apos;: &#123;</span><br><span class="line">        &apos;console&apos;:&#123;</span><br><span class="line">            &apos;level&apos;:&apos;DEBUG&apos;,</span><br><span class="line">            &apos;class&apos;:&apos;logging.StreamHandler&apos;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;loggers&apos;: &#123;</span><br><span class="line">        &apos;django.db.backends&apos;: &#123;</span><br><span class="line">            &apos;handlers&apos;: [&apos;console&apos;],</span><br><span class="line">            &apos;propagate&apos;: True,</span><br><span class="line">            &apos;level&apos;:&apos;DEBUG&apos;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="聚合查询与分组查询"><a href="#聚合查询与分组查询" class="headerlink" title="聚合查询与分组查询"></a>聚合查询与分组查询</h3><p>aggregate<br>Book.objects.filter(author_name=”alex”).aggregate(SUM(“price”))</p>
+<p>annotate<br>Book.objects.values(“author_name”).annotate(SUM(“price”))</p>
+<h3 id="F查询和Q查询"><a href="#F查询和Q查询" class="headerlink" title="F查询和Q查询"></a>F查询和Q查询</h3><p>F查询 对对象中某个列的值进行操作<br><code>from django.db.models import F</code><br><code>models.Book.objects.all().update(price=F(&quot;price&quot;+20))</code></p>
+<p>Q查询 灵活查询，封装关键字查询<br><code>from django.db.models import Q</code><br>1.进行组合<br>| or<br>&amp; and<br>~ not<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj=models.Book.objects.filter（Q(id=3) | Q(title=&quot;php&quot;))[0]</span><br></pre></td></tr></table></figure></p>
+<p>2.你<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj=models.Book.objects.filter（Q(id=3) | Q(title=&quot;php&quot;),color=&quot;red&quot;)[0]</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -363,7 +492,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/26/Django模板/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/26/Django_view&url/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -382,7 +511,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/26/Django模板/" itemprop="url">Django模板</a></h1>
+                <a class="post-title-link" href="/2017/12/26/Django_view&url/" itemprop="url">Django_view&url</a></h1>
         
 
         <div class="post-meta">
@@ -435,7 +564,6 @@
         
           
             <p><em>本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题</em></p>
-<p><img src="E:\chengxu18\public\images\马里奥.jpg" alt="马里奥.jpg"></p>
 <h1 id="一、-配置、启动"><a href="#一、-配置、启动" class="headerlink" title="一、 配置、启动"></a>一、 配置、启动</h1><h2 id="1-django-admin-startproject-mysite"><a href="#1-django-admin-startproject-mysite" class="headerlink" title="1.django-admin startproject mysite"></a>1.<code>django-admin startproject mysite</code></h2><p>settings 配置设置<br>urls 路由分配<br>wsgi  web服务器</p>
 <p><code>manage.py</code> —– Django项目里面的工具，通过它可以调用django shell和数据库等。<br><code>settings.py</code> —- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。<br><code>urls.py</code> —– 负责把URL模式映射到应用程序。<br>views 视图函数</p>
 <h2 id="2-在mysite-目录下创建blog应用"><a href="#2-在mysite-目录下创建blog应用" class="headerlink" title="2.在mysite 目录下创建blog应用"></a>2.在mysite 目录下创建blog应用</h2><p><code>python manage.py startapp blog</code><br>blog文件  中<br>models.py   orm<br>views.py      httpresponse实例化    request<br>test.py 检测用<br>admin.py 强大之处</p>
@@ -475,7 +603,7 @@
 <h1 id="六、模板-继承"><a href="#六、模板-继承" class="headerlink" title="六、模板 继承"></a>六、模板 继承</h1><p>在HTML中 可替换的部分 用  <code>block  endblock</code>包起来<br>在填充 HTML中 extends 继承父HTML文件，而且可以邮以下形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">block</span><br><span class="line">	block</span><br><span class="line">    endblock</span><br><span class="line">endblock</span><br></pre></td></tr></table></figure></p>
 <h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;1&gt; 创建 base.html 模板，在其中定义站点的主要外观感受。 这些都是不常修改甚至从不修改的部分。</span><br><span class="line">&lt;2&gt; 为网站的每个区域创建 base_SECTION.html 模板(例如, base_photos.html 和 base_forum.html )。这些模板对base.html 进行拓展，并包含区域特定的风格与设计。</span><br><span class="line">&lt;3&gt; 为每种类型的页面创建独立的模板，例如论坛页面或者图片库。 这些模板拓展相应的区域模板。</span><br></pre></td></tr></table></figure>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;1&gt;如果在模板中使用 extends必须保证其为模板中的第一个模板标记。 否则，模板继承将不起作用</span><br><span class="line"> &lt;2&gt;一般来说，基础模板中的block %标签越多越好。</span><br><span class="line"> &lt;3&gt;如果发觉自己在多个模板之间拷贝代码，你应该考虑将该代码段放置到父模板的某个  block中。如果要访问父模板中的块的内容，使用 &#123;&#123; block.super &#125;&#125;这个标签</span><br><span class="line">&lt;4&gt;不允许在同一个模板中定义多个同名的  block。存在这样的限制是因为block 标签的工作方式是双向的。block 标签不仅挖了一个要填的坑，也定义了在父模板中这个坑所填充的内容。如果模板中出现了两个相同名称的block标签，父模板将无从得知要使用哪个块的内容。</span><br></pre></td></tr></table></figure>
-<p>==小结==<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- 重点 render(req,template对象，context对象)</span><br><span class="line">- 句点号（调用列表，属性）</span><br><span class="line">- 两个大括号加变量</span><br><span class="line">- &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">- |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">- sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">- 在settings中 `Installapps（app）`</span><br><span class="line">- 文件夹的名字固定：templatetags  tags</span><br><span class="line">- .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">- 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- 重点 render(req,template对象，context对象)</span><br><span class="line">- 句点号（调用列表，属性）</span><br><span class="line">- 两个大括号加变量</span><br><span class="line">- &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">- |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">- sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">- 在settings中 `Installapps（app）`</span><br><span class="line">- 文件夹的名字固定：templatetags  tags</span><br><span class="line">- .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">- 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure>
 
           
         
@@ -685,7 +813,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -698,7 +826,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">Tags</span>
                 
               </div>

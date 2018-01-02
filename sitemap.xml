@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/12/26/Django%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>http://yoursite.com/2017/12/26/Django_view&url/</loc>
     
-    <lastmod>2018-01-01T00:56:54.544Z</lastmod>
+    <lastmod>2018-01-02T00:19:32.340Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/12/26/Django%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>http://yoursite.com/2017/12/26/Django_modules/</loc>
     
-    <lastmod>2018-01-01T00:56:20.288Z</lastmod>
+    <lastmod>2018-01-02T00:18:41.648Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/01/01/Ajax/</loc>
+    
+    <lastmod>2018-01-01T03:35:39.645Z</lastmod>
     
   </url>
   
