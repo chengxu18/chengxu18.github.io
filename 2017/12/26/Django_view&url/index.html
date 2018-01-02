@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="1k2m5&#39;s blog">
 <meta property="og:description" content="本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题 一、 配置、启动1.django-admin startproject mysitesettings 配置设置urls 路由分配wsgi  web服务器 manage.py —– Django项目里面的工具，通过它可以调用django shell和数据库等。settings.py —- 包含了项目的默认设置">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-02T00:19:32.340Z">
+<meta property="og:updated_time" content="2018-01-02T07:19:58.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django_view&amp;url">
 <meta name="twitter:description" content="本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题 一、 配置、启动1.django-admin startproject mysitesettings 配置设置urls 路由分配wsgi  web服务器 manage.py —– Django项目里面的工具，通过它可以调用django shell和数据库等。settings.py —- 包含了项目的默认设置">
@@ -182,8 +182,8 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p><em>本文中代码不可直接借鉴，由于模板语言与md存在命名规则冲突，文中代码会出现缺少{\%的问题</em></p>
 <h1 id="一、-配置、启动"><a href="#一、-配置、启动" class="headerlink" title="一、 配置、启动"></a>一、 配置、启动</h1><h2 id="1-django-admin-startproject-mysite"><a href="#1-django-admin-startproject-mysite" class="headerlink" title="1.django-admin startproject mysite"></a>1.<code>django-admin startproject mysite</code></h2><p>settings 配置设置<br>urls 路由分配<br>wsgi  web服务器</p>
-<p><code>manage.py</code> —– Django项目里面的工具，通过它可以调用django shell和数据库等。<br><code>settings.py</code> —- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。<br><code>urls.py</code> —– 负责把URL模式映射到应用程序。<br>views 视图函数</p>
-<h2 id="2-在mysite-目录下创建blog应用"><a href="#2-在mysite-目录下创建blog应用" class="headerlink" title="2.在mysite 目录下创建blog应用"></a>2.在mysite 目录下创建blog应用</h2><p><code>python manage.py startapp blog</code><br>blog文件  中<br>models.py   orm<br>views.py      httpresponse实例化    request<br>test.py 检测用<br>admin.py 强大之处</p>
+<p><code>manage.py</code> —– Django项目里面的工具，通过它可以调用django shell和数据库等。<br><code>settings.py</code> —- 包含了项目的默认设置，包括数据库信息，调试标志以及其他一些工作的变量。<br><code>urls.py</code> —– 负责把URL模式映射到应用程序。<br><code>views.py</code>—– 视图函数,处理网页数据</p>
+<h2 id="2-在mysite-目录下创建blog应用"><a href="#2-在mysite-目录下创建blog应用" class="headerlink" title="2.在mysite 目录下创建blog应用"></a>2.在mysite 目录下创建blog应用</h2><p><code>python manage.py startapp blog</code><br>blog文件中<br>models.py   orm<br>views.py      httpresponse实例化    request<br>test.py 检测用<br>admin.py 强大之处</p>
 <h2 id="3-启动Django项目"><a href="#3-启动Django项目" class="headerlink" title="3.启动Django项目"></a>3.启动Django项目</h2><p><code>python manage.py runserver 8080</code></p>
 <h2 id="创建APP"><a href="#创建APP" class="headerlink" title="创建APP"></a>创建APP</h2><p><code>python manage.py startapp app01</code></p>
 <h1 id="二、-url路由系统"><a href="#二、-url路由系统" class="headerlink" title="二、 url路由系统"></a>二、 url路由系统</h1><h2 id="1-url与视图函数之间的映射表"><a href="#1-url与视图函数之间的映射表" class="headerlink" title="1.url与视图函数之间的映射表"></a>1.url与视图函数之间的映射表</h2><p>url(正则表达式，视图函数，参数，别名)</p>
@@ -216,11 +216,19 @@
 <h1 id="五、-过滤器filter"><a href="#五、-过滤器filter" class="headerlink" title="五、 过滤器filter"></a>五、 过滤器filter</h1><h2 id="万能的句点号"><a href="#万能的句点号" class="headerlink" title="万能的句点号"></a>万能的句点号</h2><p>sys.path 记录搜索变量的路径，项目加载的时候回添加到项目根目录位置<br>模板语言中没有中括号，用句点号</p>
 <h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><p>循环计时，从1开始计<br>counter0从0开始计</p>
 <h2 id="filter-sample-tag"><a href="#filter-sample-tag" class="headerlink" title="filter,sample_tag"></a>filter,sample_tag</h2><p>filter参数不能超过两个<br>filter格式<code>第一个参数|filter名：第二个参数</code><br>sample_tag不能用于if<br>sample_tag格式<code>sample_tag函数名 第一个参数 第二个参数 第三个参数</code></p>
-<h2 id="常用过滤器"><a href="#常用过滤器" class="headerlink" title="常用过滤器"></a>常用过滤器</h2><p>1  add          ：   给变量加上相应的值<br> 2  addslashes   :    给变量中的引号前加上斜线<br> 3  capfirst     :    首字母大写<br>4  cut          ：   从字符串中移除指定的字符<br> 5  date         ：   格式化日期字符串<br> 6  default      ：   如果值是False,就替换成设置的默认值，否则就是用本来的值<br> 7  default_if_none:  如果值是None，就替换成设置的默认值，否则就使用本来的值</p>
+<h2 id="常用过滤器"><a href="#常用过滤器" class="headerlink" title="常用过滤器"></a>常用过滤器</h2><ul>
+<li>add          ：   给变量加上相应的值</li>
+<li>addslashes   :    给变量中的引号前加上斜线</li>
+<li>capfirst     :    首字母大写</li>
+<li>cut          ：   从字符串中移除指定的字符</li>
+<li>date         ：   格式化日期字符串</li>
+<li>default      ：   如果值是False,就替换成设置的默认值，否则就是用本来的值</li>
+<li>default_if_none:  如果值是None，就替换成设置的默认值，否则就使用本来的值</li>
+</ul>
 <h1 id="六、模板-继承"><a href="#六、模板-继承" class="headerlink" title="六、模板 继承"></a>六、模板 继承</h1><p>在HTML中 可替换的部分 用  <code>block  endblock</code>包起来<br>在填充 HTML中 extends 继承父HTML文件，而且可以邮以下形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">block</span><br><span class="line">	block</span><br><span class="line">    endblock</span><br><span class="line">endblock</span><br></pre></td></tr></table></figure></p>
 <h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;1&gt; 创建 base.html 模板，在其中定义站点的主要外观感受。 这些都是不常修改甚至从不修改的部分。</span><br><span class="line">&lt;2&gt; 为网站的每个区域创建 base_SECTION.html 模板(例如, base_photos.html 和 base_forum.html )。这些模板对base.html 进行拓展，并包含区域特定的风格与设计。</span><br><span class="line">&lt;3&gt; 为每种类型的页面创建独立的模板，例如论坛页面或者图片库。 这些模板拓展相应的区域模板。</span><br></pre></td></tr></table></figure>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;1&gt;如果在模板中使用 extends必须保证其为模板中的第一个模板标记。 否则，模板继承将不起作用</span><br><span class="line"> &lt;2&gt;一般来说，基础模板中的block %标签越多越好。</span><br><span class="line"> &lt;3&gt;如果发觉自己在多个模板之间拷贝代码，你应该考虑将该代码段放置到父模板的某个  block中。如果要访问父模板中的块的内容，使用 &#123;&#123; block.super &#125;&#125;这个标签</span><br><span class="line">&lt;4&gt;不允许在同一个模板中定义多个同名的  block。存在这样的限制是因为block 标签的工作方式是双向的。block 标签不仅挖了一个要填的坑，也定义了在父模板中这个坑所填充的内容。如果模板中出现了两个相同名称的block标签，父模板将无从得知要使用哪个块的内容。</span><br></pre></td></tr></table></figure>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- 重点 render(req,template对象，context对象)</span><br><span class="line">- 句点号（调用列表，属性）</span><br><span class="line">- 两个大括号加变量</span><br><span class="line">- &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">- |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">- sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">- 在settings中 `Installapps（app）`</span><br><span class="line">- 文件夹的名字固定：templatetags  tags</span><br><span class="line">- .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">- 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;1&gt;如果在模板中使用 extends必须保证其为模板中的第一个模板标记。 否则，模板继承将不起作用</span><br><span class="line"> &lt;2&gt;一般来说，基础模板中的block标签越多越好。</span><br><span class="line"> &lt;3&gt;如果发觉自己在多个模板之间拷贝代码，你应该考虑将该代码段放置到父模板的某个  block中。如果要访问父模板中的块的内容，使用 &#123;&#123; block.super &#125;&#125;这个标签</span><br><span class="line">&lt;4&gt;不允许在同一个模板中定义多个同名的  block。存在这样的限制是因为block 标签的工作方式是双向的。block 标签不仅挖了一个要填的坑，也定义了在父模板中这个坑所填充的内容。如果模板中出现了两个相同名称的block标签，父模板将无从得知要使用哪个块的内容。</span><br></pre></td></tr></table></figure>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- render(req,template对象，context对象)</span><br><span class="line">- 句点号（调用列表，属性）</span><br><span class="line">- 两个大括号加变量</span><br><span class="line">- &#123;var_name|filter&#125;|管道符后面用Filter过滤器（addslashes 给变量中的引号前加深斜线）</span><br><span class="line">- |管道符后面加safe，变量是含HTML标签的特殊字符串让HTML渲染。</span><br><span class="line">- sample_tag（可以传多个参数，但不能用于if for语句）和filter（最多两个参数，第一个参数是管道符前的数）</span><br><span class="line">- 在settings中 `Installapps（app）`</span><br><span class="line">- 文件夹的名字固定：templatetags  tags</span><br><span class="line">- .html文件最上面&#123;\%load tags%\&#125;</span><br><span class="line">- 继承 extends  为了避免重复，调用模板</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -228,7 +236,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-01-02T00:19:32.340Z" itemprop="dateUpdated">2018-01-02 08:19:32</time>
+    最后更新时间：<time datetime="2018-01-02T07:19:58.074Z" itemprop="dateUpdated">2018-01-02 15:19:58</time>
 </span><br>
 
 
@@ -311,9 +319,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/12/26/Django_modules/" id="post-prev" class="post-nav-link">
+      <a href="/2017/12/26/Django_models/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Django_modules</h4>
+        <h4 class="title">[no title]</h4>
       </a>
     </div>
   

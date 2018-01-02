@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2017/12/26/Django_models/</loc>
     
-    <lastmod>2018-01-02T01:07:27.344Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/12/26/Django_view&url/</loc>
-    
-    <lastmod>2018-01-02T00:19:32.340Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/12/26/Django_modules/</loc>
-    
-    <lastmod>2018-01-02T00:18:41.648Z</lastmod>
+    <lastmod>2018-01-02T14:55:40.977Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2018/01/01/Ajax/</loc>
     
-    <lastmod>2018-01-01T03:35:39.645Z</lastmod>
+    <lastmod>2018-01-02T07:23:45.937Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/12/26/Django_view&url/</loc>
+    
+    <lastmod>2018-01-02T07:19:58.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2018-01-02T01:07:27.344Z</lastmod>
     
   </url>
   
