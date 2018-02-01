@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="JavaScript">
-    <meta name="description" content="一、AJAX简介$.ajax() AJAX(Asynchronous Javascript And XML)异步Javascript和XML 用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML) 两大特点 局部刷新，交互性更强，用户体验好  异步传送，效率高，但对server端压力大   二、工作原理javascript 异步数据获取技术XmlHTTPR">
+    <meta name="description" content="一、AJAX简介AJAX(Asynchronous Javascript And XML)异步Javascript和XML 用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML) 两大特点 局部刷新，交互性更强，用户体验好  异步传送，效率高，但对server端压力大   二、工作原理javascript 异步数据获取技术XmlHTTPRequest xm">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax">
 <meta property="og:url" content="http://yoursite.com/2018/01/02/ajax/index.html">
 <meta property="og:site_name" content="1k2m5&#39;s blog">
-<meta property="og:description" content="一、AJAX简介$.ajax() AJAX(Asynchronous Javascript And XML)异步Javascript和XML 用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML) 两大特点 局部刷新，交互性更强，用户体验好  异步传送，效率高，但对server端压力大   二、工作原理javascript 异步数据获取技术XmlHTTPR">
+<meta property="og:description" content="一、AJAX简介AJAX(Asynchronous Javascript And XML)异步Javascript和XML 用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML) 两大特点 局部刷新，交互性更强，用户体验好  异步传送，效率高，但对server端压力大   二、工作原理javascript 异步数据获取技术XmlHTTPRequest xm">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-02T15:05:56.514Z">
+<meta property="og:updated_time" content="2018-01-04T02:09:24.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax">
-<meta name="twitter:description" content="一、AJAX简介$.ajax() AJAX(Asynchronous Javascript And XML)异步Javascript和XML 用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML) 两大特点 局部刷新，交互性更强，用户体验好  异步传送，效率高，但对server端压力大   二、工作原理javascript 异步数据获取技术XmlHTTPR">
+<meta name="twitter:description" content="一、AJAX简介AJAX(Asynchronous Javascript And XML)异步Javascript和XML 用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML) 两大特点 局部刷新，交互性更强，用户体验好  异步传送，效率高，但对server端压力大   二、工作原理javascript 异步数据获取技术XmlHTTPRequest xm">
     
         <link rel="alternate" type="application/atom+xml" title="1k2m5&#39;s blog" href="/atom.xml">
     
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、AJAX简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、AJAX简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#两大特点"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">两大特点</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、工作原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、工作原理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、基于JS的ajax的实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、基于JS的ajax的实现</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、AJAX简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、AJAX简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#两大特点"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">两大特点</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、工作原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、工作原理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、基于JS的ajax的实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、基于JS的ajax的实现</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、基于jquery的ajax的实现-ajax"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、基于jquery的ajax的实现$.ajax()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ajax-最底层的方法"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">$.ajax() 最底层的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSON"><span class="post-toc-number">4.0.2.</span> <span class="post-toc-text">JSON</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同源策略（浏览器）"><span class="post-toc-number">4.0.3.</span> <span class="post-toc-text">同源策略（浏览器）</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -180,8 +180,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="一、AJAX简介"><a href="#一、AJAX简介" class="headerlink" title="一、AJAX简介"></a>一、AJAX简介</h1><p><code>$.ajax()</code></p>
-<p>AJAX(Asynchronous Javascript And XML)异步Javascript和XML</p>
+            <h1 id="一、AJAX简介"><a href="#一、AJAX简介" class="headerlink" title="一、AJAX简介"></a>一、AJAX简介</h1><p>AJAX(Asynchronous Javascript And XML)异步Javascript和XML</p>
 <p>用Javascript语言与服务器进行异步交互，传送的数据为XML(现在传JSON，不用XML)</p>
 <h4 id="两大特点"><a href="#两大特点" class="headerlink" title="两大特点"></a>两大特点</h4><ul>
 <li><p>局部刷新，交互性更强，用户体验好</p>
@@ -194,13 +193,12 @@
 <p>xml</p>
 <p>Dom</p>
 <p>XHTML和CSS</p>
-<p><strong>核心：XmlHTTPRequest</strong></p>
+<p><strong>核心：XMLHttpRequest</strong></p>
 <ul>
-<li>onreadystatechange  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">request.onreadystatechange = function()&#123;</span><br><span class="line">	if(request.readyState == 4)&#123;</span><br><span class="line">    	//从服务器获取数据的代码，并做响应处理</span><br><span class="line">        alert(request.responseText);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">request.send(null);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>readyState属性 5个值：</li>
+<li><p>onreadystatechange  </p>
+</li>
+<li><p>readyState属性 5个值：</p>
+</li>
 </ul>
 <ol>
 <li><p>0请求未初始化 </p>
@@ -215,9 +213,9 @@
 </li>
 </ol>
 <ul>
-<li><p>responseText</p>
+<li><p>responseText  获取服务器返回数据</p>
 </li>
-<li><p>open()</p>
+<li><p>open() 三个参数</p>
 </li>
 </ul>
 <ol>
@@ -228,10 +226,11 @@
 <li><p>异步处理标志</p>
 </li>
 </ol>
-<ul>
-<li>send()</li>
-</ul>
 <p>request.open(“GRT”,”test.txt”,true)</p>
+<ul>
+<li>send()<br><code>request.send(&quot;name=cx&quot;)</code>这里必须有等于</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">request.onreadystatechange = function()&#123;</span><br><span class="line">	if(request.readyState == 4)&#123;</span><br><span class="line">    	//从服务器获取数据的代码，并做响应处理</span><br><span class="line">        alert(request.responseText);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">request.send(null);</span><br></pre></td></tr></table></figure>
 <h1 id="三、基于JS的ajax的实现"><a href="#三、基于JS的ajax的实现" class="headerlink" title="三、基于JS的ajax的实现"></a>三、基于JS的ajax的实现</h1><ol>
 <li>创建核心对象</li>
 </ol>
@@ -244,14 +243,28 @@
 <li><p>注册监听，监听服务器响应 <code>xmlhttp(if == 4:{var context = xmlhttp.responetext})</code></p>
 </li>
 </ol>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> &lt;script&gt;</span><br><span class="line">    function func1(self) &#123;</span><br><span class="line">        var username = self.value;</span><br><span class="line">&#123;#        var username = self.getAttribute(&quot;value&quot;);#&#125;</span><br><span class="line">&#123;#        alert(username);#&#125;</span><br><span class="line">        var xmlhttp = createXMLHttpRequest();</span><br><span class="line">        xmlhttp.open(&quot;POST&quot;,&quot;/ajax_register/&quot;,true);</span><br><span class="line"></span><br><span class="line">        xmlhttp.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line">        xmlhttp.send(&quot;username=&quot;+username);</span><br><span class="line">        xmlhttp.onreadystatechange=function()&#123;</span><br><span class="line">            if(xmlhttp.readyState==4 &amp;&amp; xmlhttp.status == 200)&#123;</span><br><span class="line">                //alert(xmlhttp.responseText)</span><br><span class="line">                var s = xmlhttp.responseText;</span><br><span class="line">&#123;#                alert(s);#&#125;</span><br><span class="line">                if(s==&quot;1&quot;)&#123;</span><br><span class="line">                    alert(&quot;OK&quot;)</span><br><span class="line">                    document.getElementById(&quot;error&quot;).innerHTML=&quot;用户名已经注册了&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    function createXMLHttpRequest() &#123;</span><br><span class="line">        var xmlHttp;</span><br><span class="line">        xmlHttp = new XMLHttpRequest()</span><br><span class="line">        return xmlHttp;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="四、基于jquery的ajax的实现-ajax"><a href="#四、基于jquery的ajax的实现-ajax" class="headerlink" title="四、基于jquery的ajax的实现$.ajax()"></a>四、基于jquery的ajax的实现$.ajax()</h1><h3 id="ajax-最底层的方法"><a href="#ajax-最底层的方法" class="headerlink" title="$.ajax() 最底层的方法"></a><code>$.ajax()</code> 最底层的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(</span><br><span class="line">url:</span><br><span class="line">type:&quot;POST&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.在setting.py中加</span><br><span class="line"></span><br><span class="line">STATICFILES_DIRS=(</span><br><span class="line">    os.path.join(BASE_DIR,&quot;static&quot;)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">2.新建static目录，放入jQuery文件</span><br><span class="line">3.用JavaScript进行调用</span><br><span class="line">`console.log(arguments)`</span><br></pre></td></tr></table></figure>
+<p>快捷方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- $.get(url,[data],[callback],[type])</span><br><span class="line">- $.post(url,[data],[callback],[type])</span><br><span class="line">- $.getJson() 与get的区别 get的type为Json</span><br><span class="line">- $.getScript(&quot;/static/test.js/&quot;,function)#调用的时候再加载JS</span><br><span class="line">- $.getJSON()</span><br><span class="line">- $ajax(&#123;</span><br><span class="line">name:&quot;a&quot;,</span><br><span class="line">&#125;)#url作为参数</span><br><span class="line">- $ajax(url,&#123;</span><br><span class="line"></span><br><span class="line">&#125;)#先写url</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">url:&quot;&quot;,</span><br><span class="line">type:&quot;POST&quot;,</span><br><span class="line">data:&#123;a:1,b:2,&#125;,</span><br><span class="line">traditional:&quot;true&quot;,#data中有数组</span><br><span class="line">processData:&quot;false&quot; #让浏览器不要对data中的数转码</span><br><span class="line">contentType:text, #浏览器给服务器</span><br><span class="line">dataType: &quot;json&quot;, #响应数据</span><br><span class="line">success:function(data)&#123;</span><br><span class="line">	console.log(data)  #HttpResponse(&apos;&quot;hello&quot;&apos;)</span><br><span class="line">&#125;,</span><br><span class="line">error:function(data)&#123;</span><br><span class="line">	console.log(arguments)</span><br><span class="line">	alert(data)</span><br><span class="line">&#125;,</span><br><span class="line">compete:function()&#123;</span><br><span class="line"></span><br><span class="line">&#125;,#不管成功失败都打印</span><br><span class="line">statusCode:&#123;</span><br><span class="line">	&apos;403&apos;:function()&#123;</span><br><span class="line">    	</span><br><span class="line">    &#125;，</span><br><span class="line">&#125; #HttpResponse.status_code=&quot;&quot; 根据状态码执行</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>1.js的原生对象，轻量级的数据交换形式<br>JSON语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">json---python</span><br><span class="line"></span><br><span class="line">num---int,float</span><br><span class="line">string---str,unicode</span><br><span class="line">array---list,tuple</span><br><span class="line">&#123;&#125;---dict</span><br><span class="line">null---none</span><br><span class="line">true---true</span><br><span class="line">false---false</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line"></span><br><span class="line">f = open(&quot;test&quot;,&quot;r&quot;)</span><br><span class="line">data=f.read()</span><br><span class="line">data=json.loads(data)</span><br><span class="line">print(data[&quot;name&quot;])</span><br></pre></td></tr></table></figure>
+<p>json.dumps() 作json转换<br>json.parse()<br>双引号可以，单引号不行<br>{“”:””}符合json规范<br>test中<code>{&quot;name&quot;:&quot;alex&quot;}</code></p>
+<p>2.JSON与XML比较</p>
+<p>XML已经流行好多年，但在AJAX领域，JSON更受欢迎<br>JSON本身就是JS对象，简单很多<br>3.parse()和.stringify()<br>parse用于从一个字符串中解析出json对象  JSON.parse(str)<br>stringify把json对象转换成json字符串</p>
+<p>4.beforeSend 发送前执行，如设置请求头</p>
+<h3 id="同源策略（浏览器）"><a href="#同源策略（浏览器）" class="headerlink" title="同源策略（浏览器）"></a>同源策略（浏览器）</h3><p>源 <a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a> 协议+IP地址+端口<br>浏览器会判断是否同源，不同源不允许数据交互<br>跨域不能请求数据<br>用<script>标签  含有src属性的标签都可以跨域请求数据<br>访问接口<br>jsonp:json + padding<br>test()在JS中已经定义好了<br><code>return HttpResponse(&quot;test(&#39;var&#39;)&quot;)</code><br>动态创建<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">	function addScriptTag(src)&#123;</span><br><span class="line">    	var script = document.createElement(&apos;script&apos;);</span><br><span class="line">        script.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);</span><br><span class="line">        script.src = src;</span><br><span class="line">        document.body.appendChild(script);</span><br><span class="line">    &#125;</span><br><span class="line">    function fetch(arg)&#123;</span><br><span class="line">    	alert(&quot;hello&quot; + arg)</span><br><span class="line">    &#125;</span><br><span class="line">	window.onload = function()&#123;</span><br><span class="line">    	addScriptTag(&quot;http://127.0.0.1:8002/get_byjsonp?callback=fetch&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">views.py</span><br><span class="line"></span><br><span class="line">	func = req.GET.get(&quot;callback&quot;,None)</span><br><span class="line">    </span><br><span class="line">    return HttpResponse(&quot;%s(&apos;var&apos;)&quot;%func)</span><br></pre></td></tr></table></figure></p>
+<h3 id="jQuery对JSONP的实现"><a href="#jQuery对JSONP的实现" class="headerlink" title="jQuery对JSONP的实现"></a>jQuery对JSONP的实现</h3><p>jQuery可以用$.getJSON(url,[data],[callbock])方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	$.getJSON(&quot;http://127.0.0.1:8002/get_byjsonp?callback=?&quot;,function(arg)&#123;</span><br><span class="line">    	alert(&quot;hello&quot; + arg)</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">	$.ajax(&#123;</span><br><span class="line">    	url:&quot;&quot;,</span><br><span class="line">        dataType:&quot;jsonp&quot;,</span><br><span class="line">        jsonp:&quot;callbacks&quot;,</span><br><span class="line">        jsonpCallback:&quot;fetch&quot;,</span><br><span class="line">    &#125;)</span><br><span class="line">    function fecth(arg)&#123;</span><br><span class="line">    	alert(arg)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">	$.ajax(&#123;</span><br><span class="line">    	url:&quot;&quot;,</span><br><span class="line">        dataType:&quot;jsonp&quot;,</span><br><span class="line">        jsonp:&quot;callbacks&quot;,</span><br><span class="line">        success:funtion(data)&#123;</span><br><span class="line">        	alert(data)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">def get_byjsonp(req):</span><br><span class="line"></span><br><span class="line">	callback = req.GET.get(&apos;callbacks&apos;)</span><br><span class="line">    print(callback)</span><br><span class="line">    return HttpResponse(&apos;%s(&apos;var&apos;)&apos;%callback)</span><br></pre></td></tr></table></figure></script></p>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-01-02T15:05:56.514Z" itemprop="dateUpdated">2018-01-02 23:05:56</time>
+    最后更新时间：<time datetime="2018-01-04T02:09:24.394Z" itemprop="dateUpdated">2018-01-04 10:09:24</time>
 </span><br>
 
 
@@ -331,14 +344,21 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/01/04/简单后台管理/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">[no title]</h4>
+      </a>
+    </div>
   
 
   
     <div class="waves-block waves-effect next">
       <a href="/2017/12/26/Django_models/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">No title</h4>
+        <h4 class="title">[no title]</h4>
       </a>
     </div>
   
